@@ -15,7 +15,7 @@ def load_model(file_path):
         st.error(f"Model file {file_path} not found. Please train and save the model first.")
         st.stop()
 
-rf_model = load_model(r'random_forest_model.pkl)
+rf_model = load_model('random_forest_model.pkl)
 ridge_model = load_model(r'ridge_model.pkl')
 lr_model = load_model(r'linear_regression_model.pkl')
 gb_model = load_model(r'gradient_boosting_model.pkl')
