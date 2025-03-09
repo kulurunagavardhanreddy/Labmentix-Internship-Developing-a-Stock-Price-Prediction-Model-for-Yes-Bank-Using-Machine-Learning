@@ -31,7 +31,7 @@ def local_css(file_name):
 local_css("style.css") # Load the CSS
 
 # Load historical data
-data_path = "C:/Users/nag15/OneDrive/Desktop/Labmentix/Yes_Bank_Stock_Price/data_YesBank_StockPrices.csv"
+data_path = r"data_YesBank_StockPrices.csv"
 df = pd.read_csv(data_path)
 df['Year'] = 2025
 df['Date'] = pd.to_datetime(df['Date'] + '-' + df['Year'].astype(str), format="%d-%b-%Y")
