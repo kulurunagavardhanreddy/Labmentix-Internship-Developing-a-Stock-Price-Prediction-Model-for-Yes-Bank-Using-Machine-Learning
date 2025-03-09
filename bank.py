@@ -15,11 +15,11 @@ def load_model(file_path):
         st.error(f"Model file {file_path} not found. Please train and save the model first.")
         st.stop()
 
-rf_model = load_model(r'C:/Users/nag15/OneDrive/Desktop/Labmentix/Yes_Bank_Stock_Price/random_forest_model.pkl')
-ridge_model = load_model(r'C:/Users/nag15/OneDrive/Desktop/Labmentix/Yes_Bank_Stock_Price/ridge_model.pkl')
-lr_model = load_model(r'C:/Users/nag15/OneDrive/Desktop/Labmentix/Yes_Bank_Stock_Price/linear_regression_model.pkl')
-gb_model = load_model(r'C:/Users/nag15/OneDrive/Desktop/Labmentix/Yes_Bank_Stock_Price/gradient_boosting_model.pkl')
-scaler = load_model(r'C:/Users/nag15/OneDrive/Desktop/Labmentix/Yes_Bank_Stock_Price/scaler.pkl')
+rf_model = load_model(r'random_forest_model.pkl')
+ridge_model = load_model(r'ridge_model.pkl')
+lr_model = load_model(r'linear_regression_model.pkl')
+gb_model = load_model(r'gradient_boosting_model.pkl')
+scaler = load_model(r'scaler.pkl')
 
 st.set_page_config(page_title="Yes Bank Stock Prediction", layout="wide")
 
@@ -31,7 +31,7 @@ def local_css(file_name):
 local_css("style.css")  # Load the CSS
 
 # Load historical data
-data_path = "C:/Users/nag15/OneDrive/Desktop/Labmentix/Yes_Bank_Stock_Price/data_YesBank_StockPrices.csv"
+data_path = r"data_YesBank_StockPrices.csv"
 df = pd.read_csv(data_path)
 df['Year'] = 2025
 df['Date'] = pd.to_datetime(df['Date'] + '-' + df['Year'].astype(str), format="%d-%b-%Y")
